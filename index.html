@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Start of basic Information of the site -->
+    <meta name="description" content="Revisiting the Basics of HTML (List, Link, Table, Images, Viewports, Meta) and the contents are all about me.">
+    <meta name="author" content="Jerome Michael Dela Cruz">
+    <meta name="keywords"
+        content="Jerome Michael Dela Cruz, personal project, projects, about, frontend mentor challenges, web designer ">
+    <!-- End of basic Information of the site -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisiting the Basics!</title>
+    <!-- Title icon -->
+    <link rel="icon" href="./assets/computer-svgrepo-com.svg">
+    <!-- My styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Header tag includes the navigation bar itself and the "hero" image banner!-->
+    <header>
+        <nav id="main-nav">
+            <!-- Clickable logo to go back to the main page! -->
+            <a class="logo-link" href="#">
+                <div class="nav-logo">
+                    <p>JM</p>
+                </div>
+            </a>
+            <ul class="nav-list">
+                <li> <a title="Go back to the main page" href="#">Home</a> </li>
+                <li> <a title="See pictures of our work!" href="#">Gallery</a> </li>
+                <li> <a title="Contact Us!" href="#">Contact</a> </li>
+            </ul>
+            <div class="hamburger-btn">
+                <label for="check">
+                    <input type="checkbox" id="check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <!-- End of Header -->
+    <main>
+        <section class="intro-section">
+            <h1 class="special-h-style"> About Me </h1>
+            <p>As a web designer, I love the challenge of taking a client's vision and turning it into a tangible,
+                interactive reality. The process of designing a website is a constant exercise in problem-solving and
+                creativity, which keeps me engaged and excited about each project. Knowing that my work can have a real
+                impact on a business or individual is what drives my passion for web design. Furthermore, below are the
+                projects that I have also done in the past. Also, I love cars and here
+                are my top 5s!</p>
+        </section>
+
+        <!-- Start of Table Section -->
+        <table>
+            <thead>
+                <tr>
+                    <th class="special-h-style" colspan="3">My Top 5 Cars</th>
+                </tr>
+                <tr>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Production Years</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Mazda</td>
+                    <td>MX-5 Miata</td>
+                    <td>1997-2023</td>
+                </tr>
+                <tr>
+                    <td>RX7</td>
+                    <td>1997</td>
+                </tr>
+                <tr>
+                    <td>BMW</td>
+                    <td>Z4</td>
+                    <td>2006-2023</td>
+                </tr>
+                <tr>
+                    <td>Toyota</td>
+                    <td>GR-86</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Honda</td>
+                    <td>Civic Type-R</td>
+                    <td>2023</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of Table Section -->
+
+        <!-- Start of Project Section -->
+        <h2 class="special-h-style"> My Projects </h2>
+        <section class="project-section">
+
+            <!--Start of 1st Project-->
+            <div class="project">
+                <h3 class="special-h-style">MonMon Sushi Restaurant</h3>
+                <a class="img-link" target="_blank" href="./assets/MonMon-Sushi-Restaurant.png">
+                    <img alt="MonMon Sushi Restaurant Project Preview" src="./assets/MonMon-Sushi-Restaurant.png">
+                </a>
+                <p>This project is a demonstration of a responsive website.</p>
+                <a target="_blank" class="project-link" title="Click to go to MonMon Sushi Restaurant Project"
+                    href="https://noonecaresman023.github.io/Reponsive-Web-Design-Demonstration/"> Click here to view
+                    the full project </a>
+            </div>
+            <!--End of 1st Project-->
+
+            <!--Start of 2nd Project-->
+            <div class="project">
+                <h3 class="special-h-style">CSS Styling and Animation</h3>
+                <a class="img-link" target="_blank" href="./assets/CSS-Styling-Animation.png">
+                    <img alt="CSS Styling and Animation Project Preview" src="./assets/CSS-Styling-Animation.png">
+                </a>
+                <p>This is a project that involves CSS Stylings and animations!</p>
+                <a target="_blank" class="project-link" title="Click to go to CSS Styling and Animation Project"
+                    href="https://noonecaresman023.github.io/CSS-Styling-Project/"> Click here to view the full project
+                </a>
+            </div>
+            <!--End of 2nd Project-->
+
+            <!--Start of 3rd Project-->
+            <div class="project">
+                <h3 class="special-h-style">Four Card Section</h3>
+                <a class="img-link" target="_blank" href="./assets/Four-Card-Section.png">
+                    <img alt="Four Card Section Project Preview" src="./assets/Four-Card-Section.png">
+                </a>
+                <p>This is a challenge by Frontend Mentor and it's a responsive site that features a Four Card Content
+                </p>
+                <a target="_blank" class="project-link" title="Click to go to Four Card Section Project"
+                    href="https://noonecaresman023.github.io/Four-Card-Section/"> Click here to view the full project
+                </a>
+            </div>
+            <!--End of 3rd Project-->
+
+
+        </section>
+        <!-- End of Project Section -->
+    </main>
+
+    <footer>
+        <p>
+            Project is made by <a target="_blank" href="https://github.com/noonecaresman023">Jerome Michael Dela
+                Cruz</a>
+        </p>
+    </footer>
+</body>
+
+</html>

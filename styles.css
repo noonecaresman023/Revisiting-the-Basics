@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Philosopher:ital,wght@0,400;1,700&display=swap');
+/*
+font-family: 'Nunito', sans-serif;
+font-family: 'Philosopher', sans-serif;;
+*/
+
+/* Simple CSS Reset style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth !important; /*Smooth scrolling*/
+    animation: transitionIn .5s;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    overflow: hidden !important; /* The whole purpose of this is to remove horizontal scrolling on smaller viewports*/
+}
+
+/* General Styling */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5em;
+    padding: 3rem;
+    text-align: center;
+}
+
+h1,h2,h3,p, table{
+    margin: 1.5em;
+}
+
+table, th, td{
+    border: 1px solid black;
+    width: 40%;
+}
+
+th{
+    background-color: rgb(226, 226, 226);
+}
+
+td{
+    padding: 1em;
+}
+
+
+/* Applied to every h1-h6 */
+.special-h-style{
+    color: rgb(250, 35, 35);
+}
+
+/* Project link style guidelines */
+/*
+
+a               // Selects all general links 
+a:link          // Refers to links that haven't been visited by the user
+a:visited       // Refers to the links that were visited by the user
+a:hover         // When the user hovers over the link, all styles that are included here is gonna be initiated
+a:active        // Will initiate all styles inside this when the link is clicked and hold
+
+*/
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: black;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: rgb(191, 0, 0);
+}
+
+/* NAVIGATION BAR STYLES */
+
+/* The actual navbar where the links are*/
+#main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* This just creates the circle for the "MonMon" */
+.nav-logo{
+    border: 2px solid red;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 2rem;
+}
+
+/*Logo link is both the text and the circle*/
+/* The logo is also a way to get back to the homepage of the site by clicking on it so that's why it is also a link*/
+.logo-link{
+    font-style: italic;
+    font-family: 'Philosopher', sans-serif;
+    text-decoration: none;
+}
+
+/* So that everything has the same style for :focus for links*/
+.logo-link:focus{
+    border-bottom: 2px solid red;   
+}
+
+/* Styles for the navigation links "Home Menu Contact"*/
+#main-nav ul{
+    display: flex;
+}
+
+/* Margin of left and right of 2rem so that they are spaced*/
+#main-nav ul li a{
+    color: white;
+    font-size: 1rem;
+    margin: 0 2rem;
+    text-decoration: none;
+    transition: all .3s linear; 
+}
+
+/* So that it wont change the color of the link as this is a special type of link and not something that is clickable in the content area*/
+#main-nav ul li a:link{
+    color: white;
+}
+
+#main-nav ul li a:visited{
+    color: white;
+}
+
+/* Just puts a border-bottom when navigating the navbar using tab key*/
+#main-nav ul li a:focus{
+    border-bottom: 2px solid red;
+}
+
+#main-nav ul li a:hover{
+    color: red;
+}
+
+/* if you click and hold the navigation link it will produce the color that is in this CSS style*/
+#main-nav ul li a:active{
+    color: rgb(177, 0, 0);
+}
+
+/** HAMBURGER BUTTON FOR COLLAPSIBLE NAVBAR **/
+label{
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+/* STYLING THE LINES */
+label span{
+    background: white;
+    border-radius: 10px;
+    height: 8px;
+    margin: 5px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    width: 80%;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/*Turns the hamburger into an x when pressed*/
+/*FIRST LINE OF THE BURGER BUTTON */
+input[type="checkbox"]:checked ~ span:nth-of-type(1){
+    transform-origin: bottom;
+    transform: rotatez(45deg) translateX(5px)translateY(5px);
+}
+
+/*SECOND LINE OF THE BURGER BUTTON */
+input[type="checkbox"]:checked ~ span:nth-of-type(2){
+    opacity: 0;
+}
+
+/*THIRD LINE OF THE BURGER BUTTON */
+input[type="checkbox"]:checked ~ span:nth-of-type(3){
+    transform-origin: bottom;
+    transform: rotatez(-45deg) translateX(15px)translateY(-12px);
+}
+
+/* Contains the actual hamburger button*/
+.hamburger-btn{
+    visibility: hidden;     /*So that it doesn't show on larger viewports*/
+    position: absolute;
+    right: 2rem;
+}
+
+/** END OF NAVIGATION STYLE**/
+
+/** START OF PROJECT SECTION STYLE **/
+.project-section{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 1em;
+    grid-template-areas: 
+      "project-1 project-2 project-3"
+      "project-4 project-5 project-6"; 
+    width: 75%;
+}
+
+.project{
+    padding: 1.5em;
+    border: 2px dashed black;
+}
+
+.img-link img{
+    width: 100%;
+    transition: transform 0.25s ease;
+}
+
+ /* Animation so that if the user hovers over the image, it will enlarge and if they do click it they will be able to see the desktop version in full pciture*/
+
+.img-link img:hover{
+    transform:scale(1.5);
+    cursor: zoom-in;
+}
+
+
+/* Attribution and Footer styling */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    text-align: center;
+    background-color: black;    
+    width: 100%;
+    height: 100px;
+    color: rgb(197, 196, 196);
+    position: relative;
+    bottom: 0;
+
+}
+
+footer a{
+    color: rgb(197, 196, 196);
+}
+
+footer a:link{
+    color: rgb(197, 196, 196);
+}
+
+footer a:hover{
+    color: rgb(118, 118, 118);
+}
+
+footer a:active{
+    color: rgb(118, 118, 118);
+}
+
+
+/* ANIMATION FOR TRANSITIONING IN ALL CONTENT 
+    To create a smooth transition for the user to see when first loading up in the page.
+*/
+
+@keyframes transitionIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+/* Ipads and Tablets styling */
+/*collapsible navbar*/
+@media only screen and (min-width: 320px) and (max-width: 861px){
+    #main-nav ul{
+       visibility: hidden;
+    }
+
+    .hamburger-btn{
+        visibility: visible; /* Makes the hamburger button appear and disappear beyond 861px*/
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width:861px){
+    .project-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
