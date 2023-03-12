@@ -244,6 +244,27 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     cursor: zoom-in;
 }
 
+/** END OF PROJECT SECTION STYLE **/
+
+/** START OF PROJECT LISTING STYLE **/
+.project-list-section{
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+    border: 2px dashed black;
+    margin: 2em;
+}
+
+.project-list-section ul{
+    list-style-type: disc;
+}
+
+.project-list-section li{
+    text-align: left;
+}
+
+/** END OF PROJECT LISTING STYLE **/
+
 
 /* Attribution and Footer styling */
 footer{
